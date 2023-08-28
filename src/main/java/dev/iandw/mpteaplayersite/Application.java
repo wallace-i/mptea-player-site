@@ -14,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
-@Theme(value = "mpteaplayer", variant = Lumo.DARK)
+@Theme(value = "mpteaplayer", variant = Lumo.LIGHT)
 public class Application implements AppShellConfigurator {
 
     public static void main(String[] args) {
