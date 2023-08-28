@@ -53,19 +53,18 @@ public class MainLayout extends AppLayout {
     private SideNav createNav() {
         SideNav nav = new SideNav();
 
-        SideNavItem welcomeNav = new SideNavItem("");
-        welcomeNav.addItem(new SideNavItem("Welcome", MpTeaPlayerView.class, LineAwesomeIcon.GLOBE_SOLID.create()));
-        welcomeNav.addItem(new SideNavItem("License", LicenseView.class, LineAwesomeIcon.FILE.create()));
+        nav.addItem(new SideNavItem("Welcome", MpTeaPlayerView.class, LineAwesomeIcon.GLOBE_SOLID.create()));
+        nav.addItem(new SideNavItem("License", LicenseView.class, LineAwesomeIcon.FILE.create()));
 
         SideNavItem aboutNav = new SideNavItem("About");
-        aboutNav.addItem(new SideNavItem("What is mpTea?", AboutView.class, LineAwesomeIcon.FILE.create()));
+        aboutNav.addItem(new SideNavItem("What is mpTea Player?", AboutView.class, LineAwesomeIcon.FILE.create()));
         aboutNav.addItem(new SideNavItem("Features", FeaturesView.class, LineAwesomeIcon.FILE.create()));
         aboutNav.addItem(new SideNavItem("Download", DownloadView.class, LineAwesomeIcon.FILE.create()));
 
         SideNavItem useNav = new SideNavItem("Use");
         useNav.addItem(new SideNavItem("Install", FeaturesView.class, LineAwesomeIcon.FILE.create()));
-        useNav.addItem(new SideNavItem("Settings", FeaturesView.class, LineAwesomeIcon.FILE.create()));
-        useNav.addItem(new SideNavItem("Menu Bar", FeaturesView.class, LineAwesomeIcon.FILE.create()));
+        useNav.addItem(new SideNavItem("Setup Library", FeaturesView.class, LineAwesomeIcon.FILE.create()));
+        useNav.addItem(new SideNavItem("Importing", FeaturesView.class, LineAwesomeIcon.FILE.create()));
         useNav.addItem(new SideNavItem("User Controls", FeaturesView.class, LineAwesomeIcon.FILE.create()));
         useNav.addItem(new SideNavItem("Create Playlists", FeaturesView.class, LineAwesomeIcon.FILE.create()));
         useNav.addItem(new SideNavItem("Keyboard Shortcuts", FeaturesView.class, LineAwesomeIcon.FILE.create()));
@@ -73,8 +72,9 @@ public class MainLayout extends AppLayout {
         SideNavItem supportNav = new SideNavItem("Support");
         supportNav.addItem(new SideNavItem("Contact", DownloadView.class, LineAwesomeIcon.FILE.create()));
         supportNav.addItem(new SideNavItem("Bug Report", DownloadView.class, LineAwesomeIcon.FILE.create()));
+        supportNav.addItem(new SideNavItem("Donate", DownloadView.class, LineAwesomeIcon.FILE.create()));
 
-        nav.addItem(welcomeNav, aboutNav, useNav, supportNav);
+        nav.addItem(aboutNav, useNav, supportNav);
 
         return nav;
     }
