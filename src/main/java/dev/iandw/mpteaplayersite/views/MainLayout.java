@@ -63,7 +63,7 @@ public class MainLayout extends AppLayout {
 
         SideNavItem useNav = new SideNavItem("Use");
         useNav.addItem(new SideNavItem("Install", FeaturesView.class, LineAwesomeIcon.FILE.create()));
-        useNav.addItem(new SideNavItem("Setup Library", FeaturesView.class, LineAwesomeIcon.FILE.create()));
+        useNav.addItem(new SideNavItem("Setup/Settings", FeaturesView.class, LineAwesomeIcon.FILE.create()));
         useNav.addItem(new SideNavItem("Importing", FeaturesView.class, LineAwesomeIcon.FILE.create()));
         useNav.addItem(new SideNavItem("User Controls", FeaturesView.class, LineAwesomeIcon.FILE.create()));
         useNav.addItem(new SideNavItem("Create Playlists", FeaturesView.class, LineAwesomeIcon.FILE.create()));
@@ -71,7 +71,6 @@ public class MainLayout extends AppLayout {
 
         SideNavItem supportNav = new SideNavItem("Support");
         supportNav.addItem(new SideNavItem("Contact", DownloadView.class, LineAwesomeIcon.FILE.create()));
-        supportNav.addItem(new SideNavItem("Bug Report", DownloadView.class, LineAwesomeIcon.FILE.create()));
         supportNav.addItem(new SideNavItem("Donate", DownloadView.class, LineAwesomeIcon.FILE.create()));
 
         nav.addItem(aboutNav, useNav, supportNav);
