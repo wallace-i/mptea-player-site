@@ -1,4 +1,4 @@
-package dev.iandw.mpteaplayersite.views.install;
+package dev.iandw.mpteaplayersite.views.playlists;
 
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Image;
@@ -9,11 +9,11 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.lumo.LumoUtility;
 import dev.iandw.mpteaplayersite.views.MainLayout;
 
-@PageTitle("Install")
-@Route(value = "install", layout = MainLayout.class)
-public class Install extends VerticalLayout {
+@PageTitle("Playlists")
+@Route(value = "playlists", layout = MainLayout.class)
+public class PlaylistsView extends VerticalLayout {
 
-    public Install() {
+    public PlaylistsView() {
         setSpacing(false);
 
         Image img = new Image("images/empty-plant.png", "placeholder plant");
@@ -29,5 +29,7 @@ public class Install extends VerticalLayout {
         setJustifyContentMode(JustifyContentMode.CENTER);
         setDefaultHorizontalComponentAlignment(Alignment.CENTER);
         getStyle().set("text-align", "center");
+
     }
+
 }

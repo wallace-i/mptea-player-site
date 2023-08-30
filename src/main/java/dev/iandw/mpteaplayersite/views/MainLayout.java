@@ -12,10 +12,18 @@ import com.vaadin.flow.component.sidenav.SideNavItem;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.theme.lumo.LumoUtility;
 import dev.iandw.mpteaplayersite.views.about.AboutView;
+import dev.iandw.mpteaplayersite.views.contact.ContactView;
+import dev.iandw.mpteaplayersite.views.controls.ControlsView;
+import dev.iandw.mpteaplayersite.views.donate.DonateView;
 import dev.iandw.mpteaplayersite.views.download.DownloadView;
 import dev.iandw.mpteaplayersite.views.features.FeaturesView;
+import dev.iandw.mpteaplayersite.views.importing.ImportView;
+import dev.iandw.mpteaplayersite.views.install.InstallView;
 import dev.iandw.mpteaplayersite.views.license.LicenseView;
 import dev.iandw.mpteaplayersite.views.mpteaplayer.MpTeaPlayerView;
+import dev.iandw.mpteaplayersite.views.playlists.PlaylistsView;
+import dev.iandw.mpteaplayersite.views.setup.SetupView;
+import dev.iandw.mpteaplayersite.views.shortcuts.ShortcutsView;
 import org.vaadin.lineawesome.LineAwesomeIcon;
 
 /**
@@ -54,26 +62,27 @@ public class MainLayout extends AppLayout {
         SideNav nav = new SideNav();
 
         nav.addItem(new SideNavItem("Welcome", MpTeaPlayerView.class, LineAwesomeIcon.GLOBE_SOLID.create()));
-        nav.addItem(new SideNavItem("License", LicenseView.class, LineAwesomeIcon.FILE.create()));
 
         SideNavItem aboutNav = new SideNavItem("About");
         aboutNav.addItem(new SideNavItem("What is mpTea Player?", AboutView.class, LineAwesomeIcon.FILE.create()));
         aboutNav.addItem(new SideNavItem("Features", FeaturesView.class, LineAwesomeIcon.FILE.create()));
         aboutNav.addItem(new SideNavItem("Download", DownloadView.class, LineAwesomeIcon.FILE.create()));
+        aboutNav.addItem(new SideNavItem("License", LicenseView.class, LineAwesomeIcon.FILE.create()));
 
         SideNavItem useNav = new SideNavItem("Use");
-        useNav.addItem(new SideNavItem("Install", FeaturesView.class, LineAwesomeIcon.FILE.create()));
-        useNav.addItem(new SideNavItem("Setup/Settings", FeaturesView.class, LineAwesomeIcon.FILE.create()));
-        useNav.addItem(new SideNavItem("Importing", FeaturesView.class, LineAwesomeIcon.FILE.create()));
-        useNav.addItem(new SideNavItem("User Controls", FeaturesView.class, LineAwesomeIcon.FILE.create()));
-        useNav.addItem(new SideNavItem("Create Playlists", FeaturesView.class, LineAwesomeIcon.FILE.create()));
-        useNav.addItem(new SideNavItem("Keyboard Shortcuts", FeaturesView.class, LineAwesomeIcon.FILE.create()));
+        useNav.addItem(new SideNavItem("Install", InstallView.class, LineAwesomeIcon.FILE.create()));
+        useNav.addItem(new SideNavItem("Setup/Settings", SetupView.class, LineAwesomeIcon.FILE.create()));
+        useNav.addItem(new SideNavItem("Importing", ImportView.class, LineAwesomeIcon.FILE.create()));
+        useNav.addItem(new SideNavItem("User Controls", ControlsView.class, LineAwesomeIcon.FILE.create()));
+        useNav.addItem(new SideNavItem("Create Playlists", PlaylistsView.class, LineAwesomeIcon.FILE.create()));
+        useNav.addItem(new SideNavItem("Keyboard Shortcuts", ShortcutsView.class, LineAwesomeIcon.FILE.create()));
 
         SideNavItem supportNav = new SideNavItem("Support");
-        supportNav.addItem(new SideNavItem("Contact", DownloadView.class, LineAwesomeIcon.FILE.create()));
-        supportNav.addItem(new SideNavItem("Donate", DownloadView.class, LineAwesomeIcon.FILE.create()));
+        supportNav.addItem(new SideNavItem("Contact", ContactView.class, LineAwesomeIcon.FILE.create()));
+        supportNav.addItem(new SideNavItem("Donate", DonateView.class, LineAwesomeIcon.FILE.create()));
 
         nav.addItem(aboutNav, useNav, supportNav);
+        nav.setExpanded(true);
 
         return nav;
     }

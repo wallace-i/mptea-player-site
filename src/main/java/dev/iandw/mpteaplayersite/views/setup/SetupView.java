@@ -1,19 +1,20 @@
-package dev.iandw.mpteaplayersite.views.contact;
+package dev.iandw.mpteaplayersite.views.setup;
 
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Paragraph;
+import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.lumo.LumoUtility;
 import dev.iandw.mpteaplayersite.views.MainLayout;
 
-@PageTitle("Contact")
-@Route(value = "contact", layout = MainLayout.class)
-public class Contact extends VerticalLayout {
+@PageTitle("Setup")
+@Route(value = "setup", layout = MainLayout.class)
+public class SetupView extends VerticalLayout {
 
-    public Contact() {
+    public SetupView() {
         setSpacing(false);
 
         Image img = new Image("images/empty-plant.png", "placeholder plant");
@@ -26,8 +27,8 @@ public class Contact extends VerticalLayout {
         add(new Paragraph("It’s a place where you can grow your own UI 🤗"));
 
         setSizeFull();
-        setJustifyContentMode(JustifyContentMode.CENTER);
-        setDefaultHorizontalComponentAlignment(Alignment.CENTER);
+        setJustifyContentMode(FlexComponent.JustifyContentMode.CENTER);
+        setDefaultHorizontalComponentAlignment(FlexComponent.Alignment.CENTER);
         getStyle().set("text-align", "center");
     }
 }

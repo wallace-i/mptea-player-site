@@ -1,4 +1,4 @@
-package dev.iandw.mpteaplayersite.views.importing;
+package dev.iandw.mpteaplayersite.views.donate;
 
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Image;
@@ -9,11 +9,11 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.lumo.LumoUtility;
 import dev.iandw.mpteaplayersite.views.MainLayout;
 
-@PageTitle("Importing")
-@Route(value = "importing", layout = MainLayout.class)
-public class Importing extends VerticalLayout {
+@PageTitle("Donate")
+@Route(value = "donate", layout = MainLayout.class)
+public class DonateView extends VerticalLayout {
 
-    public Importing() {
+    public DonateView() {
         setSpacing(false);
 
         Image img = new Image("images/empty-plant.png", "placeholder plant");

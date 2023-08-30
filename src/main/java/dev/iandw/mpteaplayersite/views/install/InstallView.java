@@ -1,4 +1,4 @@
-package dev.iandw.mpteaplayersite.views.shortcuts;
+package dev.iandw.mpteaplayersite.views.install;
 
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Image;
@@ -9,11 +9,11 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.lumo.LumoUtility;
 import dev.iandw.mpteaplayersite.views.MainLayout;
 
-@PageTitle("Shortcuts")
-@Route(value = "shortcuts", layout = MainLayout.class)
-public class Shortcuts extends VerticalLayout {
+@PageTitle("Install")
+@Route(value = "install", layout = MainLayout.class)
+public class InstallView extends VerticalLayout {
 
-    public Shortcuts() {
+    public InstallView() {
         setSpacing(false);
 
         Image img = new Image("images/empty-plant.png", "placeholder plant");
