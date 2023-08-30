@@ -29,7 +29,7 @@ public class MpTeaPlayerView extends VerticalLayout {
         pWelcome.addClassNames(LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
 
         Image player0 = new Image("images/player0.png", "player-screenshot-0");
-//        player0.getStyle().
+//        player0.getStyle()
 //        player0.
         add(welcome, pWelcome, player0);
 
