@@ -1,5 +1,6 @@
 package dev.iandw.mpteaplayersite.views.mpteaplayer;
 
+import com.vaadin.flow.component.Unit;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Image;
@@ -27,10 +28,10 @@ public class MpTeaPlayerView extends VerticalLayout {
                 "a subscription service or be online.");
         pWelcome.addClassNames(LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
 
-        Image img = new Image("images/empty-plant.png", "placeholder plant");
-        img.setWidth("200px");
-
-        add(welcome, pWelcome);
+        Image player0 = new Image("images/player0.png", "player-screenshot-0");
+//        player0.getStyle().
+//        player0.
+        add(welcome, pWelcome, player0);
 
 
     }
