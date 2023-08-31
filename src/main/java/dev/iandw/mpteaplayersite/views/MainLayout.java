@@ -82,7 +82,6 @@ public class MainLayout extends AppLayout {
         supportNav.addItem(new SideNavItem("Donate", DonateView.class, LineAwesomeIcon.FILE.create()));
 
         nav.addItem(aboutNav, useNav, supportNav);
-        nav.setExpanded(true);
 
         return nav;
     }
