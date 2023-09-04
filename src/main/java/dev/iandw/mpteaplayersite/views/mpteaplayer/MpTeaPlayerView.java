@@ -38,8 +38,21 @@ public class MpTeaPlayerView extends VerticalLayout {
                 "a subscription service or be online.");
         pWelcome.addClassNames(LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
 
+        // Carousel Buttons
+        Button next = new Button(">>");
+        Button prev = new Button("<<");
+        Button last = new Button(">|");
+        Button first = new Button("|<");
 
-        // Image Carousel
+        // Welcome Page GUI
+        final Carousel carousel = createCarousel(next, prev, last, first);
+        final Table welcomeTable = createWelcomeTable();
+        HorizontalLayout buttons = createButtons(next, prev, last, first);
+
+        add(h2Welcome, pWelcome, welcomeTable, carousel, buttons);
+    }
+
+    private Carousel createCarousel(Button next, Button prev, Button last, Button first) {
         Image player0 = new Image("images/player0.png", "player0");
         Image player1 = new Image("images/player1.png", "player1");
         Image player3 = new Image("images/player3.png", "player3");
@@ -52,24 +65,24 @@ public class MpTeaPlayerView extends VerticalLayout {
         carousel.setSizeFull();
         //carousel.addClassNames(LumoUtility.JustifyContent.CENTER);
 
-        Button next = new Button(">>");
-        Button prev = new Button("<<");
-        Button last = new Button(">|");
-        Button first = new Button("|<");
-
         next.addClickListener(e -> carousel.moveNext());
         prev.addClickListener(e -> carousel.movePrev());
         last.addClickListener(e -> carousel.movePos(2));
         first.addClickListener(e -> carousel.movePos(0));
 
+        return carousel;
+    }
+
+    private HorizontalLayout createButtons(Button next, Button prev, Button last, Button first) {
         HorizontalLayout buttons = new HorizontalLayout(first, prev, next, last);
         buttons.setAlignItems(Alignment.CENTER);
         buttons.setJustifyContentMode(JustifyContentMode.START);
         buttons.setMaxHeight(400, Unit.PIXELS);
 
-        /**
-         *          GET STARTED GRID
-         */
+        return buttons;
+    }
+
+    private Table createWelcomeTable() {
         Table welcomeTable = new Table();
         welcomeTable.addClassNames(LumoUtility.Margin.Top.MEDIUM);
         welcomeTable.getStyle().set("margin-left", "20px");
@@ -172,9 +185,8 @@ public class MpTeaPlayerView extends VerticalLayout {
         cell_5_1.getStyle().set("border-bottom", "1px solid #ddd");
         cell_5_1.getStyle().set("padding", "5px");
 
-        add(h2Welcome, pWelcome, welcomeTable, carousel, buttons);
+        return welcomeTable;
     }
-
 
 
 }
