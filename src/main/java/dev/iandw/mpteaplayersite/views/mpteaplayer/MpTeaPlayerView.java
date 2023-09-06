@@ -4,23 +4,17 @@ import com.flowingcode.vaadin.addons.carousel.Carousel;
 import com.flowingcode.vaadin.addons.carousel.Slide;
 import com.vaadin.flow.component.Unit;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
 import com.vaadin.flow.theme.lumo.LumoUtility;
 import dev.iandw.mpteaplayersite.views.MainLayout;
-import dev.iandw.mpteaplayersite.views.install.InstallView;
 import org.vaadin.stefan.table.Table;
 import org.vaadin.stefan.table.TableCell;
 import org.vaadin.stefan.table.TableRow;
-
-import java.util.Iterator;
-import java.util.List;
 
 @PageTitle("mpTea Player")
 @Route(value = "hello", layout = MainLayout.class)
