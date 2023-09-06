@@ -22,6 +22,8 @@ import dev.iandw.mpteaplayersite.views.install.InstallView;
 import dev.iandw.mpteaplayersite.views.license.LicenseView;
 import dev.iandw.mpteaplayersite.views.mpteaplayer.MpTeaPlayerView;
 import dev.iandw.mpteaplayersite.views.playlists.PlaylistsView;
+import dev.iandw.mpteaplayersite.views.releasenotes.version050.Version050View;
+import dev.iandw.mpteaplayersite.views.releasenotes.version075.Version075View;
 import dev.iandw.mpteaplayersite.views.setup.SetupView;
 import dev.iandw.mpteaplayersite.views.shortcuts.ShortcutsView;
 import org.vaadin.lineawesome.LineAwesomeIcon;
@@ -67,6 +69,11 @@ public class MainLayout extends AppLayout {
         aboutNav.addItem(new SideNavItem("What is mpTea Player?", AboutView.class, LineAwesomeIcon.FILE.create()));
         aboutNav.addItem(new SideNavItem("Features", FeaturesView.class, LineAwesomeIcon.FILE.create()));
         aboutNav.addItem(new SideNavItem("Download", DownloadView.class, LineAwesomeIcon.FILE.create()));
+        SideNavItem releaseNotesNav = new SideNavItem("Release Notes");
+        releaseNotesNav.setPrefixComponent(LineAwesomeIcon.FILE.create());
+        releaseNotesNav.addItem(new SideNavItem("0.7.5 Alpha Build", Version075View.class, LineAwesomeIcon.FILE.create()));
+        releaseNotesNav.addItem(new SideNavItem("0.5.0 Demo Build", Version050View.class, LineAwesomeIcon.FILE.create()));
+        aboutNav.addItem(releaseNotesNav);
         aboutNav.addItem(new SideNavItem("License", LicenseView.class, LineAwesomeIcon.FILE.create()));
 
         SideNavItem useNav = new SideNavItem("Use");

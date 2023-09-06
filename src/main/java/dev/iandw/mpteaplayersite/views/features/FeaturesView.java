@@ -26,11 +26,19 @@ public class FeaturesView extends VerticalLayout {
         pFeature.add("The following are key features of mpTea Player in a nutshell:");
 
         UnorderedList unorderedList = new UnorderedList();
-        ListItem item0 = new ListItem("Simple to set up - just initialize your Music library and begin listening.");
-        ListItem item1 = new ListItem("Easy to understand - minimal GUI interface allows for stream-lined access to your library.");
+        ListItem item0 = new ListItem("Simple to set up - just initialize your music library and begin listening.");
+        ListItem item1 = new ListItem("Easy to understand - minimal GUI interface allows for stream-lined access to your audio files.");
         ListItem item2 = new ListItem("Manage your library by importing more tracks or deleting them.");
+        ListItem item3 = new ListItem("Plays a variety of audio file types, such as MP3, MP4, AIFF, and WAV.");
+        ListItem item4 = new ListItem("Initialize your library by file structure or recursion- for organized or unorganized libraries.");
+        ListItem item5 = new ListItem("Crate playlists to group your favorite tracks together.");
+        ListItem item6 = new ListItem("Includes seven different application skins to style the player.");
+        ListItem item7 = new ListItem("Snappy search functionality using Java Predicates.");
+        ListItem item8 = new ListItem("Console Log available to see what is happening under the hood.");
+        ListItem item9 = new ListItem("Edit track and artist information i.e. fix a typo in track title or artist name.");
 
-        unorderedList.add(item0, item1, item2);
+
+        unorderedList.add(item0, item1, item2, item3, item4, item5, item6, item7, item8, item9);
 
         add(h2Features, pFeature, unorderedList);
     }

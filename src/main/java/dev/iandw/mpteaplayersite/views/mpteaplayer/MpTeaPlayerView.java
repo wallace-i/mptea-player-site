@@ -46,9 +46,10 @@ public class MpTeaPlayerView extends VerticalLayout {
 
         // Welcome Page GUI
         final Carousel carousel = createCarousel(next, prev, last, first);
+        carousel.getStyle().set("margin-left", "20px");
         final Table welcomeTable = createWelcomeTable();
         HorizontalLayout buttons = createButtons(next, prev, last, first);
-
+        buttons.getStyle().set("margin-left", "20px");
         add(h2Welcome, pWelcome, welcomeTable, carousel, buttons);
     }
 
