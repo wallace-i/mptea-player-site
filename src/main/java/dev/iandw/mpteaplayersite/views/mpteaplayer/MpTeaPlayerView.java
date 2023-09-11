@@ -48,10 +48,7 @@ public class MpTeaPlayerView extends VerticalLayout {
         final Table welcomeTable = createWelcomeTable();
         HorizontalLayout buttons = new HorizontalLayout(first, prev, next, last);
         buttons.getStyle().set("margin-left", "20px");
-//        buttons.getStyle().set("display", "block");
-//        buttons.getStyle().set("margin-left", "auto");
-//        buttons.getStyle().set("margin-right", "auto");
-//        buttons.getStyle().set("width", "50%");
+
         add(h2Welcome, pWelcome, welcomeTable, carousel, buttons);
     }
 
@@ -60,18 +57,11 @@ public class MpTeaPlayerView extends VerticalLayout {
         Image player1 = new Image("images/player1.png", "player1");
         Image player3 = new Image("images/player3.png", "player3");
 
-//        player0.getStyle().set("width", "100%");
-//        player0.getStyle().set("height", "auto");
-//        player1.getStyle().set("width", "100%");
-//        player1.getStyle().set("height", "auto");
-//        player3.getStyle().set("width", "100%");
-//        player3.getStyle().set("height", "auto");
+        Slide s0 = new Slide(player0);
+        Slide s1 = new Slide(player1);
+        Slide s2 = new Slide(player3);
 
-        Slide s1 = new Slide(player0);
-        Slide s2 = new Slide(player1);
-        Slide s3 = new Slide(player3);
-
-        final Carousel carousel = new Carousel(s1, s2, s3).withoutNavigation();
+        final Carousel carousel = new Carousel(s0, s1, s2).withoutNavigation();
         carousel.setSizeFull();
 
         next.addClickListener(e -> carousel.moveNext());

@@ -22,10 +22,16 @@ public class FeaturesView extends VerticalLayout {
     public FeaturesView() {
 
         H2 h2Features = new H2("Feature Summary");
+        h2Features.addClassNames(LumoUtility.Margin.Top.XLARGE, LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
+
         Paragraph pFeature = new Paragraph();
+        pFeature.addClassNames(LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
+
         pFeature.add("The following are key features of mpTea Player in a nutshell:");
 
         UnorderedList unorderedList = new UnorderedList();
+        unorderedList.addClassNames(LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
+
         ListItem item0 = new ListItem("Simple to set up - just initialize your music library and begin listening.");
         ListItem item1 = new ListItem("Easy to understand - minimal GUI interface allows for stream-lined access to your audio files.");
         ListItem item2 = new ListItem("Manage your library by importing more tracks or deleting them.");

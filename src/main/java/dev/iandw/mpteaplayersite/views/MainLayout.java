@@ -13,7 +13,8 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.theme.lumo.LumoUtility;
 import dev.iandw.mpteaplayersite.views.about.AboutView;
 import dev.iandw.mpteaplayersite.views.contact.ContactView;
-import dev.iandw.mpteaplayersite.views.controls.ControlsView;
+import dev.iandw.mpteaplayersite.views.userinterface.appinterface.AppInterfaceView;
+import dev.iandw.mpteaplayersite.views.userinterface.trackcontrols.ControlsView;
 import dev.iandw.mpteaplayersite.views.donate.DonateView;
 import dev.iandw.mpteaplayersite.views.download.DownloadView;
 import dev.iandw.mpteaplayersite.views.features.FeaturesView;
@@ -80,7 +81,11 @@ public class MainLayout extends AppLayout {
         useNav.addItem(new SideNavItem("Install", InstallView.class, LineAwesomeIcon.FILE.create()));
         useNav.addItem(new SideNavItem("Setup/Settings", SetupView.class, LineAwesomeIcon.FILE.create()));
         useNav.addItem(new SideNavItem("Importing", ImportView.class, LineAwesomeIcon.FILE.create()));
-        useNav.addItem(new SideNavItem("User Controls", ControlsView.class, LineAwesomeIcon.FILE.create()));
+        SideNavItem userInterfaceNav = new SideNavItem("User Interface");
+        userInterfaceNav.setPrefixComponent(LineAwesomeIcon.FILE.create());
+        userInterfaceNav.addItem(new SideNavItem("Application Interface", AppInterfaceView.class, LineAwesomeIcon.FILE.create()));
+        userInterfaceNav.addItem(new SideNavItem("Track Controls", ControlsView.class, LineAwesomeIcon.FILE.create()));
+        useNav.addItem(userInterfaceNav);
         useNav.addItem(new SideNavItem("Create Playlists", PlaylistsView.class, LineAwesomeIcon.FILE.create()));
         useNav.addItem(new SideNavItem("Keyboard Shortcuts", ShortcutsView.class, LineAwesomeIcon.FILE.create()));
 

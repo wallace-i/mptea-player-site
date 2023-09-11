@@ -17,15 +17,23 @@ public class DownloadView extends VerticalLayout {
         final String latestRelease = "0.7.5";
 
         H2 h3Download = new H2("Downloading mpTea Player " + latestRelease);
+        h3Download.addClassNames(LumoUtility.Margin.Top.XLARGE, LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
+
         Paragraph pDownload = new Paragraph();
+        pDownload.addClassNames(LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
+
         pDownload.add("mpTea Player " + latestRelease + " is the latest release.");
 
         /**
          *      Tables
          */
         H3 h3System = new H3("System Requirements");
+        h3System.addClassNames(LumoUtility.Margin.Top.XLARGE, LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
+
         H3 h3Files = new H3("Files");
-        h3Files.addClassNames(LumoUtility.Margin.Top.MEDIUM);
+        h3System.addClassNames(LumoUtility.Margin.Top.XLARGE, LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
+
+        h3Files.addClassNames(LumoUtility.Margin.Top.MEDIUM, LumoUtility.Margin.Left.LARGE);
 
         Table systemTable = createSystemTable();
         Table filesTable = createFilesTable();
@@ -34,7 +42,7 @@ public class DownloadView extends VerticalLayout {
          *      File info list
          */
         UnorderedList unorderedList = new UnorderedList();
-        unorderedList.addClassNames(LumoUtility.Margin.Top.MEDIUM);
+        unorderedList.addClassNames(LumoUtility.Margin.Top.MEDIUM, LumoUtility.Margin.Left.LARGE);
 
         // Git Link
         Anchor aGit = new Anchor("https://github.com/wallace-i/MusicPlayerJavaFxJar2", "Latest source code from repository");
@@ -90,6 +98,7 @@ public class DownloadView extends VerticalLayout {
         TableRow diskRow_2 = systemTable.addRow();
         TableCell cell_2_0 = diskRow_2.addDataCell();
         cell_2_0.add("Disk");
+        cell_2_0.getStyle().set("background-color", "#f3f5f7");
         cell_2_0.getStyle().set("border-top", "1px solid #ddd");
         cell_2_0.getStyle().set("border-bottom", "1px solid #ddd");
         cell_2_0.getStyle().set("border-left", "0px");
@@ -98,6 +107,7 @@ public class DownloadView extends VerticalLayout {
 
         TableCell cell_2_1 = diskRow_2.addDataCell();
         cell_2_1.add("Approximately 200MB for Installer, 400MB for program files.");
+        cell_2_1.getStyle().set("background-color", "#f3f5f7");
         cell_2_1.getStyle().set("border-top", "1px solid #ddd");
         cell_2_1.getStyle().set("border-bottom", "1px solid #ddd");
         cell_2_1.getStyle().set("border-left", "0px");

@@ -4,6 +4,7 @@ import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.theme.lumo.LumoUtility;
 import dev.iandw.mpteaplayersite.views.MainLayout;
 
 @PageTitle("About")
@@ -13,7 +14,10 @@ public class AboutView extends VerticalLayout {
     public AboutView() {
 
         H2 h2Introduction = new H2("Introduction");
+        h2Introduction.addClassNames(LumoUtility.Margin.Top.XLARGE, LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
+
         Paragraph pIntro = new Paragraph();
+        pIntro.addClassNames(LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
         pIntro.add("mpTea player began as a small mp3 player project based on a coding project in " +
                 "my Java textbook. With the addition of features such as saving music library data and " +
                 "playlist creation, it ballooned into a full-fledged media player. Personally, I use spotify " +
@@ -24,7 +28,11 @@ public class AboutView extends VerticalLayout {
                 "simpler to use version of a music organizer and player.");
 
         H2 h2Objectives = new H2("mpTea Player's Objectives");
+        h2Objectives.addClassNames(LumoUtility.Margin.Top.XLARGE, LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
+
         Paragraph pObjectives = new Paragraph();
+        pObjectives.addClassNames(LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
+
         Anchor aReference = new Anchor("https://docs.oracle.com/javafx/2/api/javafx/scene/media/package-summary.html", "Package javafx.scene.media");
 
         pObjectives.add("mpTea Player aims to serve the simple need of playing a variety of audio files located " +
@@ -34,7 +42,11 @@ public class AboutView extends VerticalLayout {
         pObjectives.add(" for further information on the JavaFX Media object.");
 
         H3 h3Easy = new H3("Making listening to your music easy");
+        h3Easy.addClassNames(LumoUtility.Margin.Top.XLARGE, LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
+
         Paragraph pEasy = new Paragraph();
+        pEasy.addClassNames(LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
+
         pEasy.add("All the information you need to access a music library of any size is located in " +
                 "two areas: one for artists and the other for their tracks. This offers a straight forward " +
                 "approach to accessing your music library without sifting through file trees or a plethora of GUI modules.");

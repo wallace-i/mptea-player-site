@@ -6,6 +6,7 @@ import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.theme.lumo.LumoUtility;
 import com.vaadin.flow.theme.lumo.LumoUtility.Margin;
 import dev.iandw.mpteaplayersite.views.MainLayout;
 
@@ -16,7 +17,11 @@ public class LicenseView extends VerticalLayout {
     public LicenseView() {
 
         H2 h2License = new H2("MIT License");
+        h2License.addClassNames(LumoUtility.Margin.Top.XLARGE, LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
+
         Paragraph pLicense = new Paragraph();
+        pLicense.addClassNames(LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
+
         pLicense.add("Copyright 2023, Spectral Lines Music LLC\n" +
                 "Contact: iandw@spectrallines.dev\n" +
                 "\n" +

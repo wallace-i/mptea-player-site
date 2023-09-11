@@ -19,8 +19,11 @@ public class InstallView extends VerticalLayout {
 
     public InstallView() {
         H2 h2Install = new H2("How to install mpTea Player");
+        h2Install.addClassNames(LumoUtility.Margin.Top.XLARGE, LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
 
         Paragraph paragraph0 = new Paragraph();
+        paragraph0.addClassNames(LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
+
         Anchor aDownload = new Anchor("download", "downloaded");
         paragraph0.add("To install the application, after the installer is " + aDownload +
                 ", there are a few simple steps to installation after launching the installer:");
@@ -33,6 +36,7 @@ public class InstallView extends VerticalLayout {
         ListItem li4 = new ListItem("Launch the program!");
 
         OrderedList orderedList = new OrderedList(li0, li1, li2, li3, li4);
+        orderedList.addClassNames(LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
 
         Button next = new Button(">>");
         Button prev = new Button("<<");
@@ -43,6 +47,7 @@ public class InstallView extends VerticalLayout {
         nfStep.setValue(1.0);
         nfStep.setWidth(40, Unit.PIXELS);
         Carousel carousel = createCarousel(next, prev, last, first, nfStep);
+        carousel.getStyle().set("margin-left", "20px");
         HorizontalLayout buttons = new HorizontalLayout(first, prev, pStep, nfStep, next, last);
         buttons.getStyle().set("margin-left", "20px");
 
@@ -55,13 +60,13 @@ public class InstallView extends VerticalLayout {
         Image install2 = new Image("images/install2.png", "install2");
         Image install3 = new Image("images/install3.png", "install3");
         Image install4 = new Image("images/install4.png", "install4");
-        Slide s1 = new Slide(install0);
-        Slide s2 = new Slide(install1);
-        Slide s3 = new Slide(install2);
-        Slide s4 = new Slide(install3);
-        Slide s5 = new Slide(install4);
+        Slide s0 = new Slide(install0);
+        Slide s1 = new Slide(install1);
+        Slide s2 = new Slide(install2);
+        Slide s3 = new Slide(install3);
+        Slide s4 = new Slide(install4);
 
-        final Carousel carousel = new Carousel(s1, s2, s3, s4, s5).withoutNavigation();
+        final Carousel carousel = new Carousel(s0, s1, s2, s3, s4).withoutNavigation();
         carousel.setSizeFull();
 
         next.addClickListener(e -> {
