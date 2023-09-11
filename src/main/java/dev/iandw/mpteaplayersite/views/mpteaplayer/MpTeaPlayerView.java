@@ -84,7 +84,8 @@ public class MpTeaPlayerView extends VerticalLayout {
         Anchor aDownload = new Anchor("download", "Download");
         Anchor aInstall = new Anchor("install", "Install");
         Anchor aSetup = new Anchor("setup", "Setup");
-        Anchor aControls = new Anchor("controls", "Controls");
+        Anchor aInterface = new Anchor("app-interface", "User Interface");
+        Anchor aControls = new Anchor("track-controls", "Controls");
         Anchor aFeatures = new Anchor("features", "Features");
         Anchor aImport = new Anchor("importing", "Importing");
         Anchor aContact = new Anchor("contact", "Contact");
@@ -128,6 +129,8 @@ public class MpTeaPlayerView extends VerticalLayout {
         cell_2_0.getStyle().set("padding", "5px");
 
         TableCell cell_2_1 = useRow_2.addDataCell();
+        cell_2_1.add(aInterface);
+        cell_2_1.add(", ");
         cell_2_1.add(aControls);
         cell_2_1.add(", ");
         cell_2_1.add(aFeatures);

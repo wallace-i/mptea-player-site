@@ -17,7 +17,7 @@ public class PlaylistsView extends VerticalLayout {
         H2 h2Playlist = new H2("Creating Playlists");
         h2Playlist.addClassNames(LumoUtility.Margin.Top.XLARGE, LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
 
-
+        add(h2Playlist);
     }
 
 }

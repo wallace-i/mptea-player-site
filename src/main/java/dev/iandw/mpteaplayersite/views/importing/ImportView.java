@@ -17,5 +17,6 @@ public class ImportView extends VerticalLayout {
         H2 h2Import = new H2("Importing data to mpTea Player");
         h2Import.addClassNames(LumoUtility.Margin.Top.XLARGE, LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
 
+        add(h2Import);
     }
 }

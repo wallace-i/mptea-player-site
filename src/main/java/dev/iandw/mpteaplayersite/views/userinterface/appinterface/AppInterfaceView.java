@@ -27,9 +27,9 @@ public class AppInterfaceView extends VerticalLayout {
         ListItem listItem5 = new ListItem("Album Title");
         ListItem listItem6 = new ListItem("Artist Name");
         ListItem listItem7 = new ListItem("Search function");
-        ListItem listItem8 = new ListItem("Artist List");
-        ListItem listItem9 = new ListItem("Playlist List");
-        ListItem listItem10 = new ListItem("Track List - this panel will change based on Artist or Playlist selected");
+        ListItem listItem8 = new ListItem("Artist List - lists all the Artists in your Music Library");
+        ListItem listItem9 = new ListItem("Playlist List - lists all user created Playlists");
+        ListItem listItem10 = new ListItem("Track List - lists tracks based on the Artist or Playlist selected from Artist List or Playlist List");
         ListItem listItem11 = new ListItem(aTrackControls);
         Image mpTeaPlayerControls = new Image("images/mpTeaPlayerInterface.PNG", "interface");
 

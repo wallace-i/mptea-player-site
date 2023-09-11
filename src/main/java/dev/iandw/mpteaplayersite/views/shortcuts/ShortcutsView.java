@@ -17,5 +17,6 @@ public class ShortcutsView extends VerticalLayout {
         H2 h2Shortcuts = new H2("Keyboard Shortcuts");
         h2Shortcuts.addClassNames(LumoUtility.Margin.Top.XLARGE, LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
 
+        add(h2Shortcuts);
     }
 }
