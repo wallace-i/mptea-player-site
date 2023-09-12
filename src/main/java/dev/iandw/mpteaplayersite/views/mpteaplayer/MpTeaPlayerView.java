@@ -90,6 +90,7 @@ public class MpTeaPlayerView extends VerticalLayout {
         Anchor aImport = new Anchor("importing", "Importing");
         Anchor aContact = new Anchor("contact", "Contact");
         Anchor aDonate = new Anchor("donate", "Donate");
+        Anchor aSettings = new Anchor("settings", "Settings");
 
         // Row 0 to 1: Setup
         TableRow setupRow_0 = welcomeTable.addRow();
@@ -136,6 +137,8 @@ public class MpTeaPlayerView extends VerticalLayout {
         cell_2_1.add(aFeatures);
         cell_2_1.add(", ");
         cell_2_1.add(aImport);
+        cell_2_1.add(", ");
+        cell_2_1.add(aSettings);
         cell_2_1.getStyle().set("background-color", "#f3f5f7");
         cell_2_1.getStyle().set("border-top", "1px solid #ddd");
         cell_2_1.getStyle().set("padding", "5px");

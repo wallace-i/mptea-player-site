@@ -20,6 +20,13 @@ public class AppInterfaceView extends VerticalLayout {
         HorizontalLayout horizontalLayout = new HorizontalLayout();
         horizontalLayout.addClassNames(LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
 
+        Image mpTeaPlayerInterface = new Image("images/mpTeaPlayerInterface.PNG", "interface");
+        mpTeaPlayerInterface.addClassNames(LumoUtility.Margin.Left.MEDIUM);
+        mpTeaPlayerInterface.setSizeFull();
+
+        OrderedList orderedList = new OrderedList();
+        orderedList.addClassNames(LumoUtility.Margin.Right.MEDIUM);
+
         ListItem listItem1 = new ListItem("File Menu: access Import, Settings, or Exit the program");
         ListItem listItem2 = new ListItem("Edit Menu: Create or edit any user created playlists");
         ListItem listItem3 = new ListItem("Help Menu: View README.md file, console log, or code repository");
@@ -31,12 +38,11 @@ public class AppInterfaceView extends VerticalLayout {
         ListItem listItem9 = new ListItem("Playlist List - lists all user created Playlists");
         ListItem listItem10 = new ListItem("Track List - lists tracks based on the Artist or Playlist selected from Artist List or Playlist List");
         ListItem listItem11 = new ListItem(aTrackControls);
-        Image mpTeaPlayerControls = new Image("images/mpTeaPlayerInterface.PNG", "interface");
 
-        OrderedList orderedList0 = new OrderedList(listItem1, listItem2, listItem3, listItem4, listItem5,
+        orderedList.add(listItem1, listItem2, listItem3, listItem4, listItem5,
                 listItem6, listItem7, listItem8, listItem9, listItem10, listItem11);
 
-        horizontalLayout.add(orderedList0, mpTeaPlayerControls);
+        horizontalLayout.add(mpTeaPlayerInterface, orderedList);
 
         add(h2Controls, horizontalLayout);
     }

@@ -22,6 +22,11 @@ public class SetupView extends VerticalLayout {
         H2 h2Setup = new H2("Setting up mpTea Player");
         h2Setup.addClassNames(LumoUtility.Margin.Top.XLARGE, LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
 
+        Paragraph p0 = new Paragraph();
+        p0.addClassNames(LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
+        p0.add("Running mpTea Player for the first time will bring you to the Settings window. Here you can initialize your " +
+                "Music Library by following these steps:");
+
         ListItem li0 = new ListItem("Open Settings menu option under 'File'.");
         ListItem li1 = new ListItem("Click Music Folder to initialize your music library.");
         ListItem li2 = new ListItem("Click Standard for an organized music folder, or Recursive for unorganized.");
@@ -32,6 +37,7 @@ public class SetupView extends VerticalLayout {
         OrderedList orderedList = new OrderedList(li0, li1, li2, li3, li4, li5);
         orderedList.addClassNames(LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
 
+        // Setup image carousel
         Button next = new Button(">>");
         Button prev = new Button("<<");
         Button last = new Button(">|");
@@ -45,7 +51,7 @@ public class SetupView extends VerticalLayout {
         HorizontalLayout buttons = new HorizontalLayout(first, prev, pStep, nfStep, next, last);
         buttons.getStyle().set("margin-left", "20px");
 
-        add(h2Setup, orderedList, carousel, buttons);
+        add(h2Setup, p0, orderedList, carousel, buttons);
     }
 
     private Carousel createCarousel(Button next, Button prev, Button last, Button first, NumberField nfStep) {

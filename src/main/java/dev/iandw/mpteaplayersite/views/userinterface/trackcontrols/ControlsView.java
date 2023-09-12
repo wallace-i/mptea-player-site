@@ -33,12 +33,15 @@ public class ControlsView extends VerticalLayout {
         ListItem listItem9 = new ListItem("Auto Play next track");
         ListItem listItem10 = new ListItem("Shuffle the next track selected");
         ListItem listItem11 = new ListItem("Repeat currently selected track");
+
         Image mpTeaPlayerControls = new Image("images/mpTeaPlayerControls.png", "controls");
+        mpTeaPlayerControls.getStyle().set("margin-left", "20px");
+        mpTeaPlayerControls.setSizeFull();
 
         OrderedList orderedList0 = new OrderedList(listItem1, listItem2, listItem3, listItem4, listItem5,
             listItem6, listItem7, listItem8, listItem9, listItem10, listItem11);
 
-        horizontalLayout.add(orderedList0, mpTeaPlayerControls);
+        horizontalLayout.add(mpTeaPlayerControls, orderedList0);
 
         add(h2Controls, horizontalLayout);
     }

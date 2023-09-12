@@ -38,6 +38,7 @@ public class InstallView extends VerticalLayout {
         OrderedList orderedList = new OrderedList(li0, li1, li2, li3, li4);
         orderedList.addClassNames(LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
 
+        // Install image Carousel
         Button next = new Button(">>");
         Button prev = new Button("<<");
         Button last = new Button(">|");
@@ -72,19 +73,26 @@ public class InstallView extends VerticalLayout {
         next.addClickListener(e -> {
             carousel.moveNext();
             double slideNumber = nfStep.getValue();
-            slideNumber = slideNumber >= 5.0 ? 1.0 : (slideNumber += 1.0);
+            slideNumber = slideNumber >= 5 ? 1 : slideNumber + 1;
             nfStep.setValue(slideNumber);
         });
 
         prev.addClickListener(e -> {
             carousel.movePrev();
             double slideNumber = nfStep.getValue();
-            slideNumber = slideNumber <= 1.0 ? 5.0 : (slideNumber -= 1.0);
+            slideNumber = slideNumber <= 1 ? 5 : slideNumber - 1;
             nfStep.setValue(slideNumber);
         });
 
-        last.addClickListener(e -> carousel.movePos(4));
-        first.addClickListener(e -> carousel.movePos(0));
+        last.addClickListener(e -> {
+            carousel.movePos(4);
+            nfStep.setValue(5.0);
+        });
+
+        first.addClickListener(e -> {
+            carousel.movePos(0);
+            nfStep.setValue(1.0);
+        });
 
         return carousel;
     }

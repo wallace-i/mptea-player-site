@@ -13,6 +13,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.theme.lumo.LumoUtility;
 import dev.iandw.mpteaplayersite.views.about.AboutView;
 import dev.iandw.mpteaplayersite.views.contact.ContactView;
+import dev.iandw.mpteaplayersite.views.settings.SettingsView;
 import dev.iandw.mpteaplayersite.views.userinterface.appinterface.AppInterfaceView;
 import dev.iandw.mpteaplayersite.views.userinterface.trackcontrols.ControlsView;
 import dev.iandw.mpteaplayersite.views.donate.DonateView;
@@ -79,7 +80,8 @@ public class MainLayout extends AppLayout {
 
         SideNavItem useNav = new SideNavItem("Use");
         useNav.addItem(new SideNavItem("Install", InstallView.class, LineAwesomeIcon.FILE.create()));
-        useNav.addItem(new SideNavItem("Setup/Settings", SetupView.class, LineAwesomeIcon.FILE.create()));
+        useNav.addItem(new SideNavItem("Setup", SetupView.class, LineAwesomeIcon.FILE.create()));
+        useNav.addItem(new SideNavItem("Settings", SettingsView.class, LineAwesomeIcon.FILE.create()));
         useNav.addItem(new SideNavItem("Importing", ImportView.class, LineAwesomeIcon.FILE.create()));
         SideNavItem userInterfaceNav = new SideNavItem("User Interface");
         userInterfaceNav.setPrefixComponent(LineAwesomeIcon.FILE.create());
