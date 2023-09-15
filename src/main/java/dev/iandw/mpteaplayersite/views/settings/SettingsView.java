@@ -24,10 +24,12 @@ public class SettingsView extends VerticalLayout {
         H2 h2Settings = new H2("mpTea Player Settings");
         h2Settings.addClassNames(LumoUtility.Margin.Top.XLARGE, LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
 
-        HorizontalLayout horizontalLayout = new HorizontalLayout();
+        //HorizontalLayout horizontalLayout = new HorizontalLayout();
         Image imageSettings = new Image("images/mpTeaPlayerSettings.PNG", "Settings");
         imageSettings.addClassNames(LumoUtility.Margin.Bottom.MEDIUM, LumoUtility.Margin.Left.LARGE);
         imageSettings.setSizeFull();
+        imageSettings.setMaxHeight(509, Unit.PIXELS);
+        imageSettings.setMaxWidth(701, Unit.PIXELS);
 
         OrderedList orderedList = new OrderedList();
         orderedList.addClassNames(LumoUtility.Margin.Right.LARGE);
@@ -43,7 +45,7 @@ public class SettingsView extends VerticalLayout {
 
         orderedList.add(li0, li1, li2, li3);
 
-        horizontalLayout.add(imageSettings, orderedList);
+        //horizontalLayout.add(imageSettings, orderedList);
 
         /**
          *      Appearance Themes
@@ -66,7 +68,9 @@ public class SettingsView extends VerticalLayout {
         HorizontalLayout buttons = new HorizontalLayout(first, prev, pStep, tfStyle, next, last);
         buttons.getStyle().set("margin-left", "20px");
 
-        add(h2Settings, horizontalLayout, h3Style, carousel, buttons);
+        //add(h2Settings, horizontalLayout, h3Style, carousel, buttons);
+        add(h2Settings, imageSettings, orderedList, h3Style, carousel, buttons);
+
     }
 
     private Carousel createCarousel(Button next, Button prev, Button last, Button first, TextField tfStyle, NumberField nfSlide) {
