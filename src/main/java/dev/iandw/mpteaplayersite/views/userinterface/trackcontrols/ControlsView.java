@@ -36,13 +36,14 @@ public class ControlsView extends VerticalLayout {
 
         Image mpTeaPlayerControls = new Image("images/mpTeaPlayerControls.png", "controls");
         mpTeaPlayerControls.getStyle().set("margin-left", "20px");
-        mpTeaPlayerControls.setSizeFull();
+//        mpTeaPlayerControls.setSizeFull();
 
-        OrderedList orderedList0 = new OrderedList(listItem1, listItem2, listItem3, listItem4, listItem5,
+        OrderedList orderedList = new OrderedList(listItem1, listItem2, listItem3, listItem4, listItem5,
             listItem6, listItem7, listItem8, listItem9, listItem10, listItem11);
 
-        horizontalLayout.add(mpTeaPlayerControls, orderedList0);
+        horizontalLayout.add(mpTeaPlayerControls, orderedList);
 
-        add(h2Controls, horizontalLayout);
+        //add(h2Controls, horizontalLayout);
+        add(h2Controls, mpTeaPlayerControls, orderedList);
     }
 }

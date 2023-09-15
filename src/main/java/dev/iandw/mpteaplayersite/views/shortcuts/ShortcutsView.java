@@ -186,6 +186,7 @@ public class ShortcutsView extends VerticalLayout {
         TableCell cell_10_0 = row_10.addDataCell();
         cell_10_0.add("Repeat");
         cell_10_0.getStyle().set("border-top", "1px solid #ddd");
+        cell_10_0.getStyle().set("border-bottom", "1px solid #ddd");
         cell_10_0.getStyle().set("border-left", "0px");
         cell_10_0.getStyle().set("padding", "5px");
         cell_10_0.getStyle().set("padding-right", "15px");
@@ -343,6 +344,7 @@ public class ShortcutsView extends VerticalLayout {
         TableCell cell_10_0 = row_10.addDataCell();
         cell_10_0.add("Console Log");
         cell_10_0.getStyle().set("border-top", "1px solid #ddd");
+        cell_10_0.getStyle().set("border-bottom", "1px solid #ddd");
         cell_10_0.getStyle().set("border-left", "0px");
         cell_10_0.getStyle().set("padding", "5px");
         cell_10_0.getStyle().set("padding-right", "15px");

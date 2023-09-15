@@ -22,7 +22,7 @@ public class AppInterfaceView extends VerticalLayout {
 
         Image mpTeaPlayerInterface = new Image("images/mpTeaPlayerInterface.PNG", "interface");
         mpTeaPlayerInterface.addClassNames(LumoUtility.Margin.Left.MEDIUM);
-        mpTeaPlayerInterface.setSizeFull();
+//        mpTeaPlayerInterface.setSizeFull();
 
         OrderedList orderedList = new OrderedList();
         orderedList.addClassNames(LumoUtility.Margin.Right.MEDIUM);
@@ -44,6 +44,7 @@ public class AppInterfaceView extends VerticalLayout {
 
         horizontalLayout.add(mpTeaPlayerInterface, orderedList);
 
-        add(h2Controls, horizontalLayout);
+        //add(h2Controls, horizontalLayout);
+        add(h2Controls, mpTeaPlayerInterface, orderedList);
     }
 }
